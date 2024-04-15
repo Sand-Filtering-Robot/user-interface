@@ -11,3 +11,11 @@
 .question11-text {
   font-weight: 700;
 }
+@media(max-width: 479px) {
+  .question11-text {
+    text-align: left;
+  }
+  .question11-text1 {
+    text-align: left;
+  }
+}

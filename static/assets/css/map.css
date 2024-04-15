@@ -140,43 +140,29 @@
 .map-hero {
   flex: 0 0 auto;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .map-hero1 {
-  height: 342px;
-  align-items: center;
-  justify-content: center;
+  height: auto;
 }
 .map-container1 {
   gap: var(--dl-space-space-oneandhalfunits);
+  height: 167px;
   display: flex;
-  position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
 }
 .map-hero-heading {
-  top: -64px;
-  left: -275px;
-  width: 630px;
-  position: absolute;
   max-width: 800px;
   text-align: center;
-  padding-top: var(--dl-space-space-twounits);
 }
 .map-hero-sub-heading {
   font-size: 18px;
   text-align: center;
-}
-.map-btn-group {
-  gap: var(--dl-space-space-oneandhalfunits);
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  display: flex;
-  align-items: center;
-  flex-direction: row;
 }
 .map-gallery {
   flex: 0 0 auto;
@@ -188,7 +174,7 @@
 }
 .map-gallery1 {
   width: 100%;
-  height: 718px;
+  height: 797px;
   display: grid;
   grid-gap: var(--dl-space-space-unit);
   position: relative;
@@ -203,11 +189,8 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .map-container2 {
-  top: 44px;
-  left: 119px;
-  width: 1000px;
-  margin: auto;
-  position: absolute;
+  width: 300%;
+  height: 460%;
 }
 .map-container3 {
   display: contents;
@@ -375,7 +358,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .map-text14 {
+  .map-text8 {
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
 }
@@ -393,6 +376,7 @@
     padding: 16px;
   }
   .map-hero1 {
+    height: 492px;
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
@@ -401,14 +385,21 @@
   .map-container1 {
     margin-bottom: var(--dl-space-space-unit);
   }
-  .map-btn-group {
-    flex-direction: column;
-  }
   .map-gallery1 {
     width: 100%;
+    height: 100%;
     padding: var(--dl-space-space-unit);
+    max-width: auto;
+    max-height: auto;
+  }
+  .map-container2 {
+    top: -56px;
+    left: 36px;
+    width: 50%;
+    height: 100%;
   }
   .map-footer {
+    height: 276px;
     padding: var(--dl-space-space-unit);
   }
   .map-separator {
@@ -420,7 +411,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .map-text14 {
+  .map-text8 {
     text-align: center;
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
