@@ -43,10 +43,10 @@ def not_found(error):
 
 
 # # Define a route to listen for POST requests for motor control
-@app.route('/set-mode', methods=['POST'])
-def set_mode():
-    motor_interface.send_motor_command(motor_interface.Command.MANUAL, "")
-    return redirect("/remote_control.html")
+# @app.route('/set-mode', methods=['POST'])
+# def set_mode():
+#     motor_interface.send_motor_command(motor_interface.Command.MANUAL, "")
+#     return redirect("/remote_control.html")
 #     requested_mode = request.get_json().get('mode', None)
 #     if requested_mode in ['autonomous', 'manual']:
 #         control_mode = requested_mode
@@ -57,13 +57,15 @@ def set_mode():
 
 @app.route('/motor-control', methods=['POST'])
 def motor_control():
-    motor_interface.send_motor_command(motor_interface.Command.LEFT, "")
-    return redirect("/remote_control.html")
-#     if control_mode != 'manual':
-#         return jsonify({'error': 'Robot is not in remote control mode'}), 403
+    data = request.get_json()
+    direction = data.get('direction')
+    print(direction)
 
-#     data = request.get_json()
-#     direction = data.get('direction')
+    motor_interface.send_motor_command(direction.upper(), "")
+    return redirect("/remote_control.html")
+    # if control_mode != 'manual':
+    #     return jsonify({'error': 'Robot is not in remote control mode'}), 403
+
 #     speed = data.get('speed', 0.2)  # Default speed
     
 #     # Call the appropriate MotorDriver method based on the direction
