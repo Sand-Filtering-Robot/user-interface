@@ -1,6 +1,12 @@
 from flask import Flask, make_response, jsonify, render_template, redirect, request, jsonify
 import motor_interface
 
+# utility imports
+import threading
+import socket
+
+SERVER_PORT = 8080
+
 app = Flask(__name__, static_url_path="")
 
 @app.route('/', methods=['GET'])
@@ -61,7 +67,9 @@ def motor_control():
     direction = data.get('direction')
     print(direction)
 
-    motor_interface.send_motor_command(direction.upper(), "")
+    # call helper function to send message using the global clientSocket
+    motor_interface.send_motor_command(clientSocket, direction.upper(), "")
+
     return redirect("/remote_control.html")
     # if control_mode != 'manual':
     #     return jsonify({'error': 'Robot is not in remote control mode'}), 403
@@ -88,4 +96,33 @@ def motor_control():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host="127.0.0.1", port=5000)
+
+    # we'll initialize a global socket :)
+    # why? I think it will be better than constantly creating and closing sockets
+    # We can try both appraoches and see which one works better
+    global clientSocket
+    
+    # initialize socket
+    try:
+        clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # debug print
+        print(f'Succesfully initialized User Interface socket')
+    except socket.error as err:
+        print(f'Failed to initialize socket: {err}')
+    
+    # connect to the motion control server
+    try:
+        clientSocket.connect( ('127.0.0.1', SERVER_PORT) )
+        print(f'Succesfully connected to server on port: {SERVER_PORT}')
+    except socket.error as err:
+        print(f'Failed to connect to server: {err}')
+
+    # Send a test message :)
+    clientSocket.send('Hi from client!') # this is just part of the server implementation
+                                         # kind of a debug feature
+
+    # now we will let the rest of the application handle the sending of commands
+    app.run(debug=True, host="127.0.0.1", port=5000) # is app.run() a blocking call?
+
+    # close the socket when app ends :?
+    clientSocket.close() # indicates to server that socket has been terminated
