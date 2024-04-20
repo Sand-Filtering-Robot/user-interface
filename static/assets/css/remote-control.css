@@ -198,9 +198,113 @@
 .remote-control-text08 {
   margin-bottom: var(--dl-space-space-oneandhalfunits);
 }
+.remote-control-autonomous-mode {
+  top: 292px;
+  right: 127px;
+  width: 161px;
+  height: 90px;
+  position: absolute;
+  background-color: #6cfbe1;
+}
 .remote-control-pasted-image {
-  top: 139px;
+  top: 235px;
+  left: 108px;
+  width: 126px;
+  height: 204px;
+  position: absolute;
+}
+.remote-control-speed-up {
+  top: 264px;
+  left: 141px;
+  width: 57px;
+  height: 172px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0);
+}
+.remote-control-text15 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text16 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text17 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text18 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text19 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text20 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text21 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text22 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text23 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text24 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text25 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text26 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text27 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text28 {
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-container3 {
+  top: 167px;
   left: 307px;
+  width: 582px;
+  height: 591px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.remote-control-pasted-image1 {
+  top: 0px;
+  left: 0px;
   width: 582px;
   height: 591px;
   display: flex;
@@ -213,10 +317,10 @@
   background-image: url("../../public/external/pastedimage-9kt-1500w.png");
   background-position: center;
 }
-.remote-control-pasted-image1 {
-  top: 186px;
-  left: 188px;
+.remote-control-pasted-image2 {
+  right: 179px;
   width: 37%;
+  bottom: 187px;
   height: 37%;
   position: absolute;
   align-self: center;
@@ -259,17 +363,139 @@
   border-style: hidden;
   background-color: rgba(255, 207, 135, 0);
 }
-.remote-control-button {
-  top: 82px;
-  right: 72px;
-  width: 215px;
-  height: 140px;
+.remote-control-stop-button {
+  left: 229px;
+  width: 136px;
+  bottom: 230px;
+  height: 137px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0);
+  padding-bottom: 0px;
+  background-color: rgba(255, 86, 86, 0);
+}
+.remote-control-manual-button {
+  top: 173px;
+  right: 127px;
+  width: 162px;
+  height: 100px;
   position: absolute;
   align-self: flex-start;
   text-align: center;
-  background-color: #0bff32;
+  background-color: rgb(11, 255, 50);
 }
-.remote-control-container3 {
+.remote-control-pasted-image3 {
+  top: 510px;
+  left: 108px;
+  width: 124px;
+  height: 201px;
+  position: absolute;
+}
+.remote-control-slow-down {
+  top: 518px;
+  left: 142px;
+  width: 57px;
+  height: 173px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
+}
+.remote-control-text31 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text32 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text33 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text34 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text35 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text36 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text37 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text38 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text39 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text40 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text41 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text42 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text43 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text44 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text45 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-text46 {
+  color: var(--dl-color-gray-black);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remote-control-container4 {
   gap: var(--dl-space-space-unit);
   display: flex;
   max-width: var(--dl-size-size-maxwidth);
@@ -321,7 +547,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.remote-control-container4 {
+.remote-control-container5 {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -426,12 +652,12 @@
     margin-right: 0px;
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
-  .remote-control-container4 {
+  .remote-control-container5 {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
   }
-  .remote-control-text09 {
+  .remote-control-text48 {
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
 }
@@ -461,13 +687,13 @@
     height: 100%;
     position: relative;
   }
-  .remote-control-pasted-image {
+  .remote-control-pasted-image1 {
     width: 50VW;
     height: 259px;
     margin-left: -40px;
     padding-right: 0px;
   }
-  .remote-control-pasted-image1 {
+  .remote-control-pasted-image2 {
     top: 157px;
     left: 153px;
     width: 0px;
@@ -490,7 +716,7 @@
     left: 149px;
     bottom: 32px;
   }
-  .remote-control-button {
+  .remote-control-manual-button {
     top: 124px;
     right: 8px;
     width: 20%;
@@ -504,12 +730,12 @@
     margin-top: var(--dl-space-space-oneandhalfunits);
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
-  .remote-control-container4 {
+  .remote-control-container5 {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
   }
-  .remote-control-text09 {
+  .remote-control-text48 {
     text-align: center;
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }

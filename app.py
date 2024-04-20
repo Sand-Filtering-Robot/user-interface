@@ -48,19 +48,6 @@ def not_found(error):
     return render_template('404.html')
 
 
-# # Define a route to listen for POST requests for motor control
-# @app.route('/set-mode', methods=['POST'])
-# def set_mode():
-#     motor_interface.send_motor_command(motor_interface.Command.MANUAL, "")
-#     return redirect("/remote_control.html")
-#     requested_mode = request.get_json().get('mode', None)
-#     if requested_mode in ['autonomous', 'manual']:
-#         control_mode = requested_mode
-#         if requested_mode == 'manual':
-#             driver.stop()  # Stop all motions when switching to remote control
-#         return jsonify({'status': 'Mode set to ' + requested_mode}), 200
-#     return jsonify({'error': 'Invalid mode requested'}), 400
-
 @app.route('/motor-control', methods=['POST'])
 def motor_control():
     data = request.get_json()
@@ -71,28 +58,6 @@ def motor_control():
     motor_interface.send_motor_command(clientSocket, direction.upper(), "")
 
     return redirect("/remote_control.html")
-    # if control_mode != 'manual':
-    #     return jsonify({'error': 'Robot is not in remote control mode'}), 403
-
-#     speed = data.get('speed', 0.2)  # Default speed
-    
-#     # Call the appropriate MotorDriver method based on the direction
-#     if direction == 'up':
-#         driver.forward(speed)
-#         print(driver)
-#     elif direction == 'down':
-#         driver.backward(speed)
-#         print(driver)
-#     elif direction == 'left':
-#         driver.left(speed)
-#         print(driver)
-#     elif direction == 'right':
-#         driver.right(speed)
-#         print(driver)
-#     else:
-#         return jsonify({'error': 'Invalid direction'}), 400
-
-#     return jsonify({'status': 'Motor command executed'}), 200
 
 
 if __name__ == '__main__':
@@ -118,11 +83,11 @@ if __name__ == '__main__':
         print(f'Failed to connect to server: {err}')
 
     # Send a test message :)
-    clientSocket.send('Hi from client!') # this is just part of the server implementation
+    clientSocket.send(b'Hi from client!') # this is just part of the server implementation
                                          # kind of a debug feature
 
     # now we will let the rest of the application handle the sending of commands
-    app.run(debug=True, host="127.0.0.1", port=5000) # is app.run() a blocking call?
+    app.run(debug=True, host="0.0.0.0", port=5000) # is app.run() a blocking call?
 
     # close the socket when app ends :?
     clientSocket.close() # indicates to server that socket has been terminated

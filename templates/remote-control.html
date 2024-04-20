@@ -53,7 +53,7 @@
           ><header
             data-thq="thq-navbar"
             class="navbarContainer remote-control-navbar-interactive"
-            ><a href="index.html" class="remote-control-logo logo">SANDE</a
+            ><a href="index.html" class="remote-control-logo logo">SAND-E</a
             ><div data-thq="thq-navbar-nav" class="remote-control-desktop-menu"
               ><nav class="remote-control-links"
                 ><a href="about-us.html" class="remote-control-nav12 bodySmall"
@@ -155,27 +155,96 @@
                 ><h2 class="remote-control-text08 heading2"
                   >Remote Control</h2
                 ></div
-              ><div class="remote-control-pasted-image"
-                ><img
-                  alt="pastedImage"
-                  src="public/external/pastedimage-2mi-600w.png"
-                  class="remote-control-pasted-image1"
-                /><button type="button" class="remote-control-up button"
-                  >Up</button
-                ><button type="button" class="remote-control-left button"
-                  >Left</button
-                ><button type="button" class="remote-control-right button"
-                  >Right</button
-                ><button type="button" class="remote-control-down button"
-                  >Down</button
+              ><button
+                type="button"
+                class="remote-control-autonomous-mode button"
+                ><span
+                  ><span>AUTONOMOUS</span><br /><span
+                    >&nbsp; &nbsp; &nbsp; &nbsp; MODE</span
+                  ><br /></span></button
+              ><img
+                alt="pastedImage"
+                src="public/external/pastedimage-cq-200w.png"
+                class="remote-control-pasted-image" /><button
+                type="button"
+                class="remote-control-speed-up button"
+                ><span
+                  ><span class="remote-control-text15">S</span
+                  ><br class="remote-control-text16" /><span
+                    class="remote-control-text17"
+                    >P</span
+                  ><br class="remote-control-text18" /><span
+                    class="remote-control-text19"
+                    >E</span
+                  ><br class="remote-control-text20" /><span
+                    class="remote-control-text21"
+                    >E</span
+                  ><br class="remote-control-text22" /><span
+                    class="remote-control-text23"
+                    >D</span
+                  ><br class="remote-control-text24" /><br
+                    class="remote-control-text25" /><span
+                    class="remote-control-text26"
+                    >U</span
+                  ><br class="remote-control-text27" /><span
+                    class="remote-control-text28"
+                    >P</span
+                  ><br /></span></button
+              ><div class="remote-control-container3"
+                ><div class="remote-control-pasted-image1"
+                  ><img
+                    alt="pastedImage"
+                    src="public/external/pastedimage-2mi-600w.png"
+                    class="remote-control-pasted-image2"
+                  /><button type="button" class="remote-control-up button"
+                    >UP</button
+                  ><button type="button" class="remote-control-left button"
+                    >LEFT</button
+                  ><button type="button" class="remote-control-right button"
+                    >RIGHT</button
+                  ><button type="button" class="remote-control-down button"
+                    >DOWN</button
+                  ><button
+                    type="button"
+                    class="remote-control-stop-button button"
+                    >STOP</button
+                  ></div
                 ></div
-              ><button type="button" class="remote-control-button button"
-                >REMOTE CONTROL ON</button
-              ></div
-            ></div
-          ></div
+              ><button type="button" class="remote-control-manual-button button"
+                >MANUAL MODE</button
+              ><img
+                alt="pastedImage"
+                src="public/external/pastedimage-q1aq-200w.png"
+                class="remote-control-pasted-image3" /><button
+                type="button"
+                class="remote-control-slow-down button"
+                ><span
+                  ><span class="remote-control-text31">S</span
+                  ><br class="remote-control-text32" /><span
+                    class="remote-control-text33"
+                    >L</span
+                  ><br class="remote-control-text34" /><span
+                    class="remote-control-text35"
+                    >O</span
+                  ><br class="remote-control-text36" /><span
+                    class="remote-control-text37"
+                    >W</span
+                  ><br class="remote-control-text38" /><br
+                    class="remote-control-text39" /><span
+                    class="remote-control-text40"
+                    >D</span
+                  ><br class="remote-control-text41" /><span
+                    class="remote-control-text42"
+                    >O</span
+                  ><br class="remote-control-text43" /><span
+                    class="remote-control-text44"
+                    >W</span
+                  ><br class="remote-control-text45" /><span
+                    class="remote-control-text46"
+                    >N</span
+                  ><br /></span></button></div></div></div
         ><footer class="footerContainer remote-control-footer"
-          ><div class="remote-control-container3"
+          ><div class="remote-control-container4"
             ><span class="logo">SANDE</span
             ><nav class="remote-control-nav1"
               ><a href="about-us.html" class="remote-control-nav122 bodySmall"
@@ -196,8 +265,8 @@
               ></nav
             ></div
           ><div class="remote-control-separator"></div
-          ><div class="remote-control-container4"
-            ><span class="bodySmall remote-control-text09"
+          ><div class="remote-control-container5"
+            ><span class="bodySmall remote-control-text48"
               >© 2024 SandE, All Rights Reserved.</span
             ><div class="remote-control-icon-group1"></div
             ><a
@@ -245,11 +314,15 @@
           .catch(error => console.error('Error:', error));
       }
   
-      document.querySelector('.remote-control-up').onclick = function() { sendMotorCommand('up'); };
-      document.querySelector('.remote-control-down').onclick = function() { sendMotorCommand('down'); };
-      document.querySelector('.remote-control-left').onclick = function() { sendMotorCommand('left'); };
-      document.querySelector('.remote-control-right').onclick = function() { sendMotorCommand('right'); };
-      document.querySelector('.remote-control-button').onclick = function() { sendMotorCommand('on'); };
+      document.querySelector('.remote-control-up').onclick = function() { sendMotorCommand('UP'); };
+      document.querySelector('.remote-control-down').onclick = function() { sendMotorCommand('DOWN'); };
+      document.querySelector('.remote-control-left').onclick = function() { sendMotorCommand('LEFT'); };
+      document.querySelector('.remote-control-right').onclick = function() { sendMotorCommand('RIGHT'); };
+      document.querySelector('.remote-control-stop-button').onclick = function() { sendMotorCommand('STOP'); };
+      document.querySelector('.remote-control-manual-button').onclick = function() { sendMotorCommand('MANUAL'); };
+      document.querySelector('.remote-control-autonomous-mode').onclick = function() { sendMotorCommand('AUTONOMOUS'); };
+      document.querySelector('.remote-control-speed-up').onclick = function() { sendMotorCommand('FASTER'); };
+      document.querySelector('.remote-control-slow-down').onclick = function() { sendMotorCommand('SLOWER'); };
       </script>
-      </body>
-      </html>
+    </body>
+    </html>
