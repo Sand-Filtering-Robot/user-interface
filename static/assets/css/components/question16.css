@@ -1,0 +1,21 @@
+.question16-container {
+  gap: var(--dl-space-space-unit);
+  flex: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.question16-text {
+  font-weight: 700;
+}
+@media(max-width: 479px) {
+  .question16-text {
+    text-align: left;
+  }
+  .question16-text1 {
+    text-align: left;
+  }
+}
