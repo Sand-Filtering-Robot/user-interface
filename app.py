@@ -1,8 +1,7 @@
 from flask import Flask, make_response, jsonify, render_template, redirect, request, jsonify
-import motor_interface
+import src.motor_interface as motor_interface
 
 # utility imports
-import threading
 import socket
 
 SERVER_PORT = 8080
